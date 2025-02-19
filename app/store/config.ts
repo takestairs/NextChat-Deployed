@@ -5,7 +5,6 @@ import {
   DEFAULT_INPUT_TEMPLATE,
   DEFAULT_MODELS,
   DEFAULT_SIDEBAR_WIDTH,
-  DEFAULT_TTS_ENGINE,
   DEFAULT_TTS_ENGINES,
   DEFAULT_TTS_MODEL,
   DEFAULT_TTS_MODELS,
@@ -57,7 +56,7 @@ export const DEFAULT_CONFIG = {
 
   disablePromptHint: false,
 
-  dontShowMaskSplashScreen: false, // dont show splash screen when create chat
+  dontShowMaskSplashScreen: true, // dont show splash screen when create chat
   hideBuiltinMasks: false, // dont add builtin masks
 
   customModels: "",
@@ -76,7 +75,7 @@ export const DEFAULT_CONFIG = {
     compressMessageLengthThreshold: 1000,
     compressModel: "",
     compressProviderName: "",
-    enableInjectSystemPrompts: true,
+    enableInjectSystemPrompts: false,
     template: config?.template ?? DEFAULT_INPUT_TEMPLATE,
     size: "1024x1024" as ModelSize,
     quality: "standard" as DalleQuality,
@@ -84,9 +83,9 @@ export const DEFAULT_CONFIG = {
   },
 
   ttsConfig: {
-    enable: false,
+    enable: true,
     autoplay: false,
-    engine: DEFAULT_TTS_ENGINE,
+    engine: "Edge-TTS",
     model: DEFAULT_TTS_MODEL,
     voice: DEFAULT_TTS_VOICE,
     speed: 1.0,
